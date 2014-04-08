@@ -1,0 +1,40 @@
+#ifndef __Exhibition_h_
+#define __Exhibition_h_
+
+#include <cstring>
+#include "OgreFramework.h"
+
+using namespace Ogre;
+
+class Exhibition
+{
+public:
+	Exhibition( void );
+	~Exhibition( void );
+
+	enum exhibitionType
+	{
+		TABLE       = 0,
+        VASE		= 1,
+		BENCH       = 2,
+        ROBOT       = 3
+	};
+
+	Vector3			getPosition( void );
+	exhibitionType	getType( void );
+	double			getAngle( void );
+	String			getName( void );
+
+	void			setPosition( Vector3 mPosition );
+	void			setType( exhibitionType mType );
+	void			setAngle( double mAngle );
+	void			setName( String mName );
+
+private:
+	Vector3			position;
+	exhibitionType	type;
+	double			angle;
+	String			name;
+};
+
+#endif 

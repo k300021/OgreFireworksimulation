@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="原始程式檔">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="標頭檔\Detour">
+      <UniqueIdentifier>{b3fc6344-0d1a-4aac-9e6b-fb84d977bf78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\DetourCrowd">
+      <UniqueIdentifier>{90848fba-f235-4777-93a1-8952eaf6d021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\DetourTileCache">
+      <UniqueIdentifier>{1d4a2299-aaf2-4216-9510-d34d2a39cbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\RecastContrib">
+      <UniqueIdentifier>{38facbf3-29ba-4069-b213-d7f3a21852cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\Recast">
+      <UniqueIdentifier>{94889ef2-450b-4d12-bc0a-599dce7f61be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\Detour">
+      <UniqueIdentifier>{3b2cdd24-68f4-477b-b04b-62c0954aa322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\DetourCrowd">
+      <UniqueIdentifier>{d6419854-8c01-46dd-8a84-dab710948bec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\DetourTileCache">
+      <UniqueIdentifier>{7d913d4d-ea29-4d82-ac95-ae2719f0c15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\RecastContrib">
+      <UniqueIdentifier>{50aad8f1-650b-4504-a0b8-347b5593b0b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\Recast">
+      <UniqueIdentifier>{2d8a0918-afe5-4c93-93de-de9d53a02e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\RecastContrib\fastlz">
+      <UniqueIdentifier>{28c8e396-9d66-462b-a410-4498d6996463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\RecastContrib\fastlz">
+      <UniqueIdentifier>{4ad021a8-fbc6-4efe-b7f7-f07c60a3d00e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\Agent">
+      <UniqueIdentifier>{77325dcb-12c2-41d2-aa92-43a0dae78cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\Agent">
+      <UniqueIdentifier>{d4a51324-5863-41ef-8202-66890bd38ef8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AppStateManager.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DemoApp.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OgreFramework.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PauseState.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ExhibitionState.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RecastConvexHull.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RecastInputGeom.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OgreRecastDefinitions.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OgreRecast.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OgreDetourTileCache.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OgreDetourCrowd.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourAlloc.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourAssert.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourCommon.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourNavMesh.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourNavMeshBuilder.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourNavMeshQuery.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourNode.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Detour\DetourStatus.h">
+      <Filter>標頭檔\Detour</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourTileCache\DetourTileCache.h">
+      <Filter>標頭檔\DetourTileCache</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourTileCache\DetourTileCacheBuilder.h">
+      <Filter>標頭檔\DetourTileCache</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MenuState.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourCrowd\DetourCrowd.h">
+      <Filter>標頭檔\DetourCrowd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourCrowd\DetourLocalBoundary.h">
+      <Filter>標頭檔\DetourCrowd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourCrowd\DetourObstacleAvoidance.h">
+      <Filter>標頭檔\DetourCrowd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourCrowd\DetourPathCorridor.h">
+      <Filter>標頭檔\DetourCrowd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourCrowd\DetourPathQueue.h">
+      <Filter>標頭檔\DetourCrowd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DetourCrowd\DetourProximityGrid.h">
+      <Filter>標頭檔\DetourCrowd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Recast\Recast.h">
+      <Filter>標頭檔\Recast</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Recast\RecastAlloc.h">
+      <Filter>標頭檔\Recast</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Recast\RecastAssert.h">
+      <Filter>標頭檔\Recast</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RecastContrib\fastlz\fastlz.h">
+      <Filter>標頭檔\RecastContrib\fastlz</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Character.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Agent\DynamicRenderable.h">
+      <Filter>標頭檔\Agent</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Agent\DynamicLines.h">
+      <Filter>標頭檔\Agent</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Header.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AppState.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CreationState.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Obstacle.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ObstacleManager.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CharacterManager.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MenuState-CEGUI.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CreationState-CEGUI.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\AppStateManager.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DemoApp.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MenuState.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\OgreFramework.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PauseState.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ExhibitionState.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\OgreDetourCrowd.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\OgreDetourTileCache.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\OgreRecast.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RecastConvexHull.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RecastInputGeom.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Character.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\RecastContrib\fastlz\fastlz.c">
+      <Filter>原始程式檔\RecastContrib\fastlz</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastRegion.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\Recast.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastAlloc.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastArea.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastContour.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastFilter.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastLayers.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastMesh.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastMeshDetail.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Recast\RecastRasterization.cpp">
+      <Filter>原始程式檔\Recast</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourTileCache\DetourTileCacheBuilder.cpp">
+      <Filter>原始程式檔\DetourTileCache</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourTileCache\DetourTileCache.cpp">
+      <Filter>原始程式檔\DetourTileCache</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourCrowd\DetourProximityGrid.cpp">
+      <Filter>原始程式檔\DetourCrowd</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourCrowd\DetourCrowd.cpp">
+      <Filter>原始程式檔\DetourCrowd</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourCrowd\DetourLocalBoundary.cpp">
+      <Filter>原始程式檔\DetourCrowd</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourCrowd\DetourObstacleAvoidance.cpp">
+      <Filter>原始程式檔\DetourCrowd</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourCrowd\DetourPathCorridor.cpp">
+      <Filter>原始程式檔\DetourCrowd</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DetourCrowd\DetourPathQueue.cpp">
+      <Filter>原始程式檔\DetourCrowd</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Detour\DetourNode.cpp">
+      <Filter>原始程式檔\Detour</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Detour\DetourAlloc.cpp">
+      <Filter>原始程式檔\Detour</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Detour\DetourCommon.cpp">
+      <Filter>原始程式檔\Detour</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Detour\DetourNavMesh.cpp">
+      <Filter>原始程式檔\Detour</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Detour\DetourNavMeshBuilder.cpp">
+      <Filter>原始程式檔\Detour</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Detour\DetourNavMeshQuery.cpp">
+      <Filter>原始程式檔\Detour</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Agent\DynamicRenderable.cpp">
+      <Filter>原始程式檔\Agent</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Agent\DynamicLines.cpp">
+      <Filter>原始程式檔\Agent</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CreationState.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Obstacle.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ObstacleManager.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CharacterManager.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MenuState-CEGUI.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CreationState-CEGUI.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

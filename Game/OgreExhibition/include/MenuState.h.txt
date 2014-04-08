@@ -1,0 +1,43 @@
+#ifndef __MENU_STATE_H__
+#define __MENU_STATE_H__
+
+#include "AppState.h"
+
+//-----------------------------------------------
+
+class MenuState : public AppState
+{
+public:
+
+    MenuState( void );
+
+	DECLARE_APPSTATE_CLASS( MenuState )
+
+	void    enter( void );
+	void    createSceneManager( void );
+    void    createCamera( void );
+    void    setViewport( void );
+    void    buildGUI( void );
+    void    createScene( void );
+	void    exit( void );
+
+	bool    keyPressed( const OIS::KeyEvent &keyEventRef );
+	bool    keyReleased( const OIS::KeyEvent &keyEventRef );
+
+	bool    mouseMoved( const OIS::MouseEvent &evt );
+	bool    mousePressed( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+	bool    mouseReleased( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+
+	void    buttonHit( OgreBites::Button* button );
+    void    yesNoDialogClosed( const Ogre::DisplayString& question, bool hitYes );
+	
+    void    update( double timeSinceLastFrame );
+
+private:
+	bool    mQuit;
+    bool    mQuestionActive;
+};
+
+//-----------------------------------------------
+
+#endif

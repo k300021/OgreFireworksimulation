@@ -1,0 +1,112 @@
+#ifndef __OGRE_FRAMEWORK_H_
+#define __OGRE_FRAMEWORK_H_
+
+#include <iostream>
+
+#include <OgreCamera.h>
+#include <OgreEntity.h>
+#include <OgreLogManager.h>
+#include <OgreRoot.h>
+#include <OgreViewport.h>
+#include <OgreSceneManager.h>
+#include <OgreRenderWindow.h>
+#include <OgreConfigFile.h>
+
+#include <OISEvents.h>
+#include <OISInputManager.h>
+#include <OISKeyboard.h>
+#include <OISMouse.h>
+
+#include <SdkTrays.h>
+#include <SdkCameraMan.h>
+
+#include <OgreOverlay.h>
+#include <OgreOverlayElement.h>
+#include <OgreOverlayManager.h>
+
+#include <CEGUI.h>
+#include <CEGUIImage.h>
+#include <CEGUISystem.h>
+#include <CEGUILogger.h>
+#include <CEGUISchemeManager.h>
+#include <CEGUIWindow.h>
+#include <CEGUIWindowManager.h>
+
+#include <elements/CEGUIPushButton.h>
+
+#include <RendererModules/Ogre/CEGUIOgreRenderer.h>
+#include <RendererModules/Ogre/CEGUIOgreResourceProvider.h>
+#include <RendererModules/Ogre/CEGUIOgreGeometryBuffer.h>
+
+#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
+#include <macUtils.h>
+#endif
+
+//-----------------------------------------------
+
+class OgreFramework : public Ogre::FrameListener, public Ogre::WindowEventListener, public OIS::KeyListener, public OIS::MouseListener, OgreBites::SdkTrayListener
+{
+public:
+    
+    Ogre::Root                  *mRoot;
+    Ogre::Viewport*				mViewport;
+	Ogre::Camera*               mCamera;
+    Ogre::SceneManager*         mSceneMgr;
+    Ogre::RenderWindow*         mWindow;
+    Ogre::String                mResourcesCfg;
+    Ogre::String                mPluginsCfg;
+    
+    // OgreBites
+    OgreBites::SdkTrayManager*  mTrayMgr;
+    bool                        mCursorWasVisible;  
+    bool                        mShutDown;
+    
+    //OIS Input devices
+    OIS::InputManager*          mInputManager;
+    OIS::Mouse*                 mMouse;
+    OIS::Keyboard*              mKeyboard;
+    
+	Ogre::Log*					mLog;
+	Ogre::Timer*                mTimer;
+
+public:
+
+    OgreFramework( void );
+    virtual ~OgreFramework( void );
+
+    virtual bool    go( const Ogre::String Title );
+
+    // OIS::KeyListener
+    virtual bool    keyPressed( const OIS::KeyEvent &arg );
+    virtual bool    keyReleased( const OIS::KeyEvent &arg );
+    
+    // OIS::MouseListener
+    virtual bool    mouseMoved( const OIS::MouseEvent &arg );
+    virtual bool    mousePressed( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
+    virtual bool    mouseReleased( const OIS::MouseEvent &arg, OIS::MouseButtonID id );
+    
+protected:
+
+    virtual bool    setup( const Ogre::String Title );
+    virtual bool    configure( const Ogre::String Title );
+    virtual void    createFrameListener( void );
+    virtual void    setupResources( void );
+    virtual void    createResourceListener( void );
+    virtual void    loadResources( void );
+    
+   // Ogre::FrameListener
+    virtual bool    frameRenderingQueued( const Ogre::FrameEvent& evt );
+    
+    // Ogre::WindowEventListener
+    virtual void    windowResized( Ogre::RenderWindow* rw );
+    virtual void    windowClosed( Ogre::RenderWindow* rw );
+    
+private:
+    
+	OgreFramework( const OgreFramework& );
+	OgreFramework& operator= ( const OgreFramework& );
+};
+
+//-----------------------------------------------
+
+#endif

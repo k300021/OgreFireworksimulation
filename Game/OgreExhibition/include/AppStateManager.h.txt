@@ -1,0 +1,50 @@
+#ifndef __APP_STATE_MANAGER_H_
+#define __APP_STATE_MANAGER_H_
+
+#include "OgreFramework.h"
+#include "AppState.h"
+
+//-----------------------------------------------
+
+class AppStateManager : public AppStateListener
+{
+public:
+
+	struct state_info
+	{
+		Ogre::String    name;
+		AppState*       state;
+	} ;
+    
+public:
+    
+	AppStateManager( void );
+	~AppStateManager( void );
+
+	void        manageAppState( Ogre::String stateName, AppState* state );
+
+	AppState*   findByName( Ogre::String stateName );
+
+	void        start( AppState* state );
+	void        changeAppState( AppState* state );
+	bool        pushAppState( AppState* state );
+	void        popAppState( void );
+	void        pauseAppState( void );
+	void        shutdown( void );
+    void        popAllAndPushAppState( AppState* state );
+
+protected:
+
+	std::vector< AppState* >    mActiveStateStack;
+	std::vector< state_info >   mStates;
+	bool                        mShutdown;
+    
+protected:
+
+	void init(AppState *state);
+    
+};
+
+//-----------------------------------------------
+
+#endif

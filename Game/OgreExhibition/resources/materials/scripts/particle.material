@@ -1,0 +1,49 @@
+vertex_program AnimatedParticleVP cg
+{
+  source particle.cg
+  entry_point main_vp
+  profiles vs_2_0 arbvp1
+}
+
+fragment_program AnimatedParticleFP cg
+{
+  source particle.cg
+  entry_point main_fp
+  profiles ps_2_0 arbfp1
+}
+
+material animated_particle
+{
+  technique
+  {
+    pass
+    {
+       vertex_program_ref AnimatedParticleVP
+      {
+        param_named_auto worldViewMatrix worldview_matrix
+        param_named_auto projMatrix projection_matrix
+        
+        param_named arCard[0] float4 -0.5 -0.5 0 0
+        param_named arCard[1] float4  0.5 -0.5 0 0
+        param_named arCard[2] float4  0.5  0.5 0 0
+        param_named arCard[3] float4 -0.5  0.5 0 0
+      }
+
+      fragment_program_ref AnimatedParticleFP
+      {
+      }
+      
+      cull_hardware none
+      scene_blend alpha_blend
+      depth_write off
+
+      // frames      
+      texture_unit
+      {
+        texture frames.dds 3d 0
+        filtering anisotropic
+        max_anisotropy 4 
+      }
+    }
+  }
+}

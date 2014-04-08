@@ -1,0 +1,90 @@
+<GUILayout>
+    <Window Name="DefaultWindow" Type="DefaultWindow">
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+        <Window Name="DefaultWindow/Titlebar" Type="OgreTray/Titlebar">
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0,450},{0,50}}" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+            <Window Name="DefaultWindow/Titlebar/Title" Type="OgreTray/Title">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Property Name="Text" Value="CreationState-CEGUI" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            </Window>
+        </Window>
+        <Window Name="DefaultWindow/Menubar" Type="OgreTray/Menubar">
+            <Property Name="UnifiedAreaRect" Value="{{0,490},{0,235},{0,790},{0,579}}" />
+            <Property Name="BackgroundColours" Value="tl:FFFFEFFF tr:FFDFDFF5 bl:FFFFFFFF br:FFFFFFFF" />
+            <Window Name="DefaultWindow/Menubar/Loadbtn" Type="OgreTray/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,200},{0,290},{0,235}}" />
+                <Property Name="Text" Value="Load" />
+                <Property Name="Margin" Value="{top:{0,0},left:{0,0},bottom:{0,10},right:{0,0}}" />
+            </Window>
+            <Window Name="DefaultWindow/Menubar/Detailbtn" Type="OgreTray/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,240},{0,290},{0,275}}" />
+                <Property Name="Text" Value="Detail" />
+                <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+            </Window>
+            <Window Name="DefaultWindow/Menubar/Cleanbtn" Type="OgreTray/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,280},{0,290},{0,315}}" />
+                <Property Name="Text" Value="Clean" />
+                <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+            </Window>
+            <Window Name="DefaultWindow/Menubar/Titlebar" Type="OgreTray/Titlebar">
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,100},{0,290},{0,145}}" />
+                <Property Name="AlwaysOnTop" Value="True" />
+                <Window Name="DefaultWindow/Menubar/Titlebar/Title" Type="OgreTray/Title">
+                    <Property Name="UnifiedAreaRect" Value="{{0,2},{0,1},{1,2},{1,0}}" />
+                    <Property Name="Text" Value="Tel(V)" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                    <Window Name="DefaultWindow/Menubar/Titlebar/Title/telChbox" Type="OgreTray/Checkbox">
+                        <Property Name="UnifiedAreaRect" Value="{{0,229},{0,10},{0,268},{0,35}}" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Name="DefaultWindow/Menubar/Savebtn" Type="OgreTray/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,164},{0,290},{0,199}}" />
+                <Property Name="Text" Value="Save" />
+                <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+            </Window>
+            <Window Name="DefaultWindow/Menubar/EndDemoBtn" Type="OgreTray/Button">
+                <Property Name="UnifiedAreaRect" Value="{{0,13},{0,47},{0,293},{0,82}}" />
+                <Property Name="Text" Value="ExitDemo" />
+                <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+            </Window>
+        </Window>
+        <Window Name="DefaultWindow/CheckEndBG" Type="OgreTray/BG">
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property Name="Alpha" Value="0.85" />
+            <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+            <Window Name="DefaultWindow/CheckEndBG/Checkbar" Type="OgreTray/Menubar">
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0,300},{0,150}}" />
+                <Property Name="AlwaysOnTop" Value="True" />
+                <Property Name="VerticalAlignment" Value="Centre" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+                <Window Name="DefaultWindow/CheckEndBG/Checkbar/Title" Type="OgreTray/Title">
+                    <Property Name="UnifiedAreaRect" Value="{{0,10},{0,5},{0,290},{0,35}}" />
+                    <Property Name="Text" Value="Sure?" />
+                    <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                </Window>
+                <Window Name="DefaultWindow/CheckEndBG/Checkbar/StaticText" Type="OgreTray/Editbox">
+                    <Property Name="UnifiedAreaRect" Value="{{0,11},{0,40},{0,291},{0,90}}" />
+                    <Property Name="Text" Value="Really leave?" />
+                    <Property Name="ReadOnly" Value="True" />
+                    <Property Name="TextFormatting" Value="CentreAligned" />
+                </Window>
+                <Window Name="DefaultWindow/CheckEndBG/Checkbar/NoBtn" Type="OgreTray/Button">
+                    <Property Name="UnifiedAreaRect" Value="{{0,10},{0,100},{0,150},{0,140}}" />
+                    <Property Name="Text" Value="No" />
+                </Window>
+                <Window Name="DefaultWindow/CheckEndBG/Checkbar/YesBtn" Type="OgreTray/Button">
+                    <Property Name="UnifiedAreaRect" Value="{{0,150},{0,100},{0,290},{0,140}}" />
+                    <Property Name="Text" Value="Yes" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

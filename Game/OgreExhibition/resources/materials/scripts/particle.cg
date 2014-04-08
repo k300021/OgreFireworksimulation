@@ -1,0 +1,50 @@
+struct VS_INPUT
+{
+	float4 vPos       : POSITION;
+  float4 vColor     : COLOR;	
+	float2 vTex       : TEXCOORD0;
+	float2 vSize      : TEXCOORD1;
+	float1 vTime      : TEXCOORD2;
+	float4 vCustom    : TEXCOORD3;
+};
+
+struct VS_OUTPUT
+{
+	float4 vPos   : POSITION;
+	float4 vColor : COLOR;
+	float4 vUV    : TEXCOORD0;	
+};
+
+VS_OUTPUT main_vp(VS_INPUT i, uniform float4x4 worldViewMatrix,
+                              uniform float4x4 projMatrix,
+                              uniform float4   arCard[4])
+{
+	VS_OUTPUT o = (VS_OUTPUT)0;
+	
+	// create billboard in camera space
+  o.vPos = mul(worldViewMatrix, float4(i.vPos.xyz, 1));
+  o.vPos += arCard[i.vPos.w] * float4(i.vSize.xy, 0, 0);
+    
+  // transform to screen space
+	o.vPos = mul(projMatrix, o.vPos);
+	
+	// copy color
+	o.vColor = i.vColor;
+	
+	// texture
+	o.vUV.xy = i.vTex.xy;
+	o.vUV.z  = saturate(i.vTime + 1.0f/256.0f) * (63.0f / 256.0f) + i.vCustom;
+	o.vUV.w  = saturate(i.vTime / 0.25f);
+	
+	return o;
+}
+
+float4 main_fp(VS_OUTPUT i,
+		uniform sampler3D texFrames : register(s0)
+		) : COLOR
+{
+	float4 vFrameColor = tex3D(texFrames, i.vUV.xyz);
+	vFrameColor *= i.vColor;
+	vFrameColor.a *= i.vUV.w;
+	return saturate(vFrameColor);
+}

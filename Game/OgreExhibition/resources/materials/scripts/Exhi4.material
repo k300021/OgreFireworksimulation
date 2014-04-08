@@ -1,0 +1,144 @@
+material NoMaterial
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material 04-tiehua
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+				texture z1.jpg
+			}
+		}
+
+	}
+
+}
+
+
+
+material 02-shedeng
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.772549 0.745098 0.662745 1
+			diffuse 0.960784 0.960784 0.960784 1
+			specular 0.45 0.45 0.45 1 10
+			emissive 0.270588 0.270588 0.270588 1
+		}
+
+	}
+
+}
+
+
+
+material 08-guangguan001
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.360784 0.360784 0.360784 1
+			diffuse 0.670588 0.670588 0.670588 1
+			specular 0.999 0.999 0.999 1 55
+		}
+
+	}
+
+}
+
+
+
+material 01-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0901961 0.466667 0.364706 1
+			diffuse 0.235294 0.635294 0.490196 1
+			specular 0.9 0.9 0.9 1 35
+		}
+
+	}
+
+}
+
+
+
+material 07-gol
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+		}
+
+	}
+
+}
+
+
+
+material Material#0
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0196078 0.0196078 0.0196078 1
+			diffuse 0.780392 0.54902 0.298039 1
+			specular 0.81 0.81 0.81 1 10
+		}
+
+	}
+
+}
+
+
+
+material 03-boli
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.027451 0.0431373 0.27451 1
+			diffuse 0.588235 0.698039 0.737255 1
+			specular 0.288 0.288 0.288 1 10
+			scene_blend add
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.5 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.5
+			}
+		}
+
+	}
+
+}

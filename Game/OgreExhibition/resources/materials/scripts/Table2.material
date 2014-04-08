@@ -1,0 +1,55 @@
+material NoMaterial
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material 13-jingsu01
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0 0 0 1
+			specular 0.72 0.72 0.72 1 10
+		}
+
+	}
+
+}
+
+
+
+material 10-boli
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.317647 0.360784 0.372549 1
+			diffuse 0.584314 0.658824 0.682353 1
+			specular 0 0 0 1 10
+			scene_blend add
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.5 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.5
+			}
+		}
+
+	}
+
+}

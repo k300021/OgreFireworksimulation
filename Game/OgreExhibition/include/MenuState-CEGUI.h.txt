@@ -1,0 +1,50 @@
+#ifndef __MENU_STATE_CEGUI_H__
+#define __MENU_STATE_CEGUI_H__
+
+#include "AppState.h"
+
+//-----------------------------------------------
+
+class MenuState_CEGUI : public AppState
+{
+public:
+
+    MenuState_CEGUI( void );
+
+	DECLARE_APPSTATE_CLASS( MenuState_CEGUI )
+
+	void    enter( void );
+	void    createSceneManager( void );
+    void    createCamera( void );
+    void    setViewport( void );
+    void    buildGUI( void );
+    void    createScene( void );
+	void    exit( void );
+
+	bool    keyPressed( const OIS::KeyEvent &keyEventRef );
+	bool    keyReleased( const OIS::KeyEvent &keyEventRef );
+
+	bool    mouseMoved( const OIS::MouseEvent &evt );
+	bool    mousePressed( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+	bool    mouseReleased( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+
+	bool    ReturnMenu( const CEGUI::EventArgs &arg );
+    bool    EnterExhibitionState( const CEGUI::EventArgs &arg );
+    bool    EnterCreationState( const CEGUI::EventArgs &arg );
+    bool    ShowCheckEnd( const CEGUI::EventArgs &arg );
+    bool    ReturnDemo( const CEGUI::EventArgs &arg );
+    bool    ExitDemoApp( const CEGUI::EventArgs &arg );
+    void    yesNoDialogClosed( const Ogre::DisplayString& question, bool hitYes );
+	
+    void    update( double timeSinceLastFrame );
+
+private:
+	bool                    mQuit;
+    bool                    mQuestionActive;
+};
+
+CEGUI::MouseButton convertButton( OIS::MouseButtonID buttonID );
+
+//-----------------------------------------------
+
+#endif

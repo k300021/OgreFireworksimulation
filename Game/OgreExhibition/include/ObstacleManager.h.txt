@@ -1,0 +1,40 @@
+#ifndef __OBSTACLE_MANAGER_H__
+#define __OBSTACLE_MANAGER_H__
+
+#include <vector>
+#include "Obstacle.h"
+
+//-----------------------------------------------
+
+class ObstacleManager
+{
+public:
+	
+    ObstacleManager( Ogre::SceneManager* sceneMgr, Ogre::Real offset, OgreDetourTileCache* detourTileCache );
+	~ObstacleManager( void );
+	
+    void	createObstacle( Ogre::Vector3 position, ObstacleType mType );
+    void	deleteObstacle( Ogre::String identity );
+	void	rotateObstacle( Ogre::String identity, Ogre::Quaternion orientation );
+	
+	void	updatePosition( Ogre::String identity, Ogre::Vector3 position );
+	void	updateOrientation( Ogre::String identity, Ogre::Quaternion orientation );
+	
+	void	saveObstaclesToFile( void );
+	void	clearObstacles( void );
+	bool	loadObstaclesFromFile( void );
+    void    showObstacleDetail( void );
+	
+private:
+	
+    Ogre::SceneManager*         mSceneMgr;
+    Ogre::Real                  mOffset;
+    OgreDetourTileCache*        mDetourTileCache;
+    
+    int                         mObstacleCount;
+	std::vector< Obstacle* >    mObstacleList;
+};
+
+//-----------------------------------------------
+
+#endif 

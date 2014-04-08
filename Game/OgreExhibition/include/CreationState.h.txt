@@ -1,0 +1,87 @@
+#ifndef __CREATION_STATE_H__
+#define __CREATION_STATE_H__
+
+#include "Header.h"
+#include "AppState.h"
+#include "OgreRecast.h"
+#include "OgreDetourTileCache.h"
+#include "ObstacleManager.h"
+
+//-----------------------------------------------
+
+class CreationState : public AppState
+{
+public:
+
+    CreationState( void );
+
+	DECLARE_APPSTATE_CLASS( CreationState )
+
+	void    enter();
+	void    createSceneManager( void );
+    void    createCamera( void );
+    void    setViewport( void );
+    void    buildGUI( void );
+    void    createScene( void );
+	void    exit( void );
+    bool    pause( void );
+	void    resume( void );
+    
+    void    moveCamera( void );
+	void    getInput( void );
+    
+	bool    keyPressed( const OIS::KeyEvent &keyEventRef );
+	bool    keyReleased( const OIS::KeyEvent &keyEventRef );
+
+	bool    mouseMoved( const OIS::MouseEvent &evt );
+	bool    mousePressed( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+	bool    mouseReleased( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+	void	onLeftPressed( const OIS::MouseEvent &evt );
+
+	void    buttonHit( OgreBites::Button* button );
+	void	itemSelected( OgreBites::SelectMenu* menu );
+	void	checkBoxToggled( OgreBites::CheckBox* box );
+	void    update( double timeSinceLastFrame );
+
+private:
+
+	bool                            mQuit;
+    bool                            mLMouseDown; 
+    bool                            mRMouseDown;
+    double                          mMoveScale;
+	Ogre::Vector3                   mTranslateVector;
+	Ogre::SceneNode*				mCurrentObject;
+	Ogre::String					mCurrentIdentity;
+    
+	OgreRecast*                     mRecast;
+    OgreDetourTileCache*            mDetourTileCache;
+    std::vector< Ogre::Entity* >    mNavmeshEnts;
+    Ogre::SceneNode*                mNavMeshNode;
+    ObstacleType                    mObstacleType;
+	ObstacleManager*                mObstacleMgr;
+
+	Ogre::RaySceneQuery*            mRayScnQuery;
+
+    bool                            mDebugDraw;
+    bool                            mWall;
+
+	OgreBites::Button*				delete_btn;
+	OgreBites::Button*				rotate_btn;
+	OgreBites::Button*				detail_btn;
+
+	OgreBites::CheckBox*			debugDrawBox;
+	OgreBites::CheckBox*			logoBox;
+	OgreBites::CheckBox*			frameStatesBox;
+
+private:
+
+    bool                queryCursorPosition( Ogre::Vector3 &rayHitPoint, unsigned long queryflags = NAVMESH_MASK, bool clipToNavmesh = true, Ogre::MovableObject **rayHitObject = NULL );
+    bool                rayQueryPointInScene( Ogre::Ray ray, unsigned long queryMask, Ogre::Vector3 &result, Ogre::MovableObject **foundMovable );
+
+	void				showDynamicBotton(bool whether_show);
+	void                setDebugVisibility( bool visible );
+};
+
+//-----------------------------------------------
+
+#endif

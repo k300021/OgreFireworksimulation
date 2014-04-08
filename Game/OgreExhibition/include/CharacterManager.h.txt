@@ -1,0 +1,51 @@
+#ifndef __CHARACTER_MANAGER_H__
+#define __CHARACTER_MANAGER_H__
+
+#include <vector>
+#include "Character.h"
+#include "Obstacle.h"
+
+//-----------------------------------------------
+
+class CharacterManager
+{
+public:
+    
+    CharacterManager( Ogre::SceneManager* sceneMgr, OgreDetourCrowd* detourCrowd, OgreDetourTileCache* detourTileCache );
+    ~CharacterManager( void );
+	
+    void	createCharacter( Ogre::Vector3 position, Ogre::Vector3 destination, bool debugDraw );
+    void	deleteCharacter( Ogre::String identity );
+    void	deleteAllCharacter( void );
+	
+    void	createExitPoint( Ogre::Vector3 position );
+    void	deleteExitPoint( Ogre::String identity );
+    void	deleteAllExitPoint( void );
+	
+    void    update( bool disasterState, double timeSinceLastFrame );
+    void    updatePosition( double timeSinceLastFrame );
+    void    updateDestination( Ogre::String identity, Ogre::Vector3 destination, bool updatePreviousPath = false );
+    void    updateRandomDestination( bool updatePreviousPath = false );
+    void    updateAllDestination( Ogre::Vector3 destination, bool updatePreviousPath = false );
+    /*
+    void    setEndPoint( Ogre::Vector3 );
+    void    clearEndPoint();
+    */
+    void    setDebugVisibility( bool visible );
+
+private:
+    
+    Ogre::SceneManager*                 mSceneMgr;
+    OgreDetourCrowd*                    mDetourCrowd;
+    OgreDetourTileCache*                mDetourTileCache;
+
+    int                                 mCharacterCount;
+	std::vector< Character* >           mCharacterList;
+
+    int                                 mExitPointCount;
+	std::vector< Ogre::SceneNode* >     mExitPointList;
+};
+
+//-----------------------------------------------
+
+#endif

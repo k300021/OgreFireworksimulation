@@ -1,0 +1,27 @@
+#ifndef __DEMO_APP_H__
+#define __DEMO_APP_H__
+
+#include <cstdlib>
+
+#include "OgreFramework.h"
+#include "AppStateManager.h"
+
+//-----------------------------------------------
+
+class DemoApp
+{
+public:
+
+	DemoApp();
+	~DemoApp();
+    
+	void    startDemo();
+    
+private:
+
+	AppStateManager*	mAppStateManager;
+};
+
+//-----------------------------------------------
+
+#endif

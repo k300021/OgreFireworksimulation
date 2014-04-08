@@ -1,0 +1,50 @@
+#ifndef __OBSTACLE_H__
+#define __OBSTACLE_H__
+
+#include <cstring>
+#include "Header.h"
+#include "OgreFramework.h"
+#include "OgreDetourTileCache.h"
+#include "RecastConvexHull.h"
+
+#define exhiScale 0.03f
+
+//-----------------------------------------------
+
+class Obstacle
+{
+public:
+	
+    Obstacle::Obstacle( Ogre::SceneManager* sceneMgr, OgreDetourTileCache* detourTileCache, Ogre::Real offset, Ogre::String identity, ObstacleType type, Ogre::Vector3 position );
+    ~Obstacle( void );
+
+    Ogre::Entity*       getEntity( void );
+    Ogre::String		getIdentity( void );
+    ObstacleType        getType( void );
+	Ogre::Vector3       getPosition( void );
+    Ogre::Quaternion    getOrientation( void );
+    
+    void                updatePosition( Ogre::Vector3 position );
+    void                updateOrientation( Ogre::Quaternion orientation );
+    
+private:
+	
+    Ogre::SceneManager*     mSceneMgr;
+    Ogre::SceneNode*        mNode;
+    Ogre::Entity*           mEntity;
+    Ogre::String            mIdentity;
+    Ogre::Vector3           mPosition;
+    Ogre::Quaternion        mOrientation;
+    ObstacleType            mType;
+	Ogre::Real              mOffset;
+    OgreDetourTileCache*    mDetourTileCache;
+    InputGeom*              mInputGeom;
+    ConvexVolume*           mConvexHull;
+#ifdef _DEBUG    
+    Ogre::ManualObject*     mConvexHullDebug;
+#endif
+};
+
+//-----------------------------------------------
+
+#endif 

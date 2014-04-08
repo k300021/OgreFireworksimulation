@@ -1,0 +1,38 @@
+<GUILayout>
+    <Window Name="Menubar" Type="OgreTray/Menubar">
+        <Property Name="UnifiedAreaRect" Value="{{0,342},{0,119},{0,642},{0,463}}" />
+        <Property Name="BackgroundColours" Value="tl:FFFFEFFF tr:FFDFDFF5 bl:FFFFFFFF br:FFFFFFFF" />
+        <Window Name="Menubar/Savebtn" Type="OgreTray/Button">
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{0,164},{0,290},{0,199}}" />
+            <Property Name="Text" Value="Save" />
+            <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+        </Window>
+        <Window Name="Menubar/Loadbtn" Type="OgreTray/Button">
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{0,200},{0,290},{0,235}}" />
+            <Property Name="Text" Value="Load" />
+            <Property Name="Margin" Value="{top:{0,0},left:{0,0},bottom:{0,10},right:{0,0}}" />
+        </Window>
+        <Window Name="Menubar/Detailbtn" Type="OgreTray/Button">
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{0,240},{0,290},{0,275}}" />
+            <Property Name="Text" Value="Detail" />
+            <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+        </Window>
+        <Window Name="Menubar/cleanbtn" Type="OgreTray/Button">
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{0,280},{0,290},{0,315}}" />
+            <Property Name="Text" Value="Clean" />
+            <Property Name="Margin" Value="{top:{0,0},left:{0,10},bottom:{0,0},right:{0,0}}" />
+        </Window>
+        <Window Name="Menubar/Titlebar" Type="OgreTray/Titlebar">
+            <Property Name="UnifiedAreaRect" Value="{{0,10},{0,100},{0,290},{0,145}}" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Window Name="Menubar/Titlebar/Title" Type="OgreTray/Title">
+                <Property Name="UnifiedAreaRect" Value="{{0,2},{0,1},{1,2},{1,0}}" />
+                <Property Name="Text" Value="Tel(V)" />
+                <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+                <Window Name="Menubar/Titlebar/Title/telChbox" Type="OgreTray/Checkbox">
+                    <Property Name="UnifiedAreaRect" Value="{{0,229},{0,10},{0,268},{0,35}}" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

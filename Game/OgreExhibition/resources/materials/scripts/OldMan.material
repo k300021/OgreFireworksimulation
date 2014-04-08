@@ -1,0 +1,21 @@
+material OldMan
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.784314 0.784314 0.784314 1
+			diffuse 0.784314 0.784314 0.784314 1
+			specular 0 0 0 1 53.8082
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture CMan0014.tif
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,152 @@
+#ifndef __EXHIBITION_STATE_H__
+#define __EXHIBITION_STATE_H__
+
+#include "AppState.h"
+#include "Header.h"
+#include "OgreRecast.h"
+#include "OgreDetourTileCache.h"
+#include "CharacterManager.h"
+#include "ObstacleManager.h"
+
+#define FIRENUM 400
+#define COUNTTIME 30* 1000
+
+//-----------------------------------------------
+
+class Grid
+{
+
+public:
+	
+	Ogre::Vector3					position;
+	int										setToFire;
+	Ogre::ParticleSystem*		firePar;
+	Ogre::SceneNode*				mScenenode;
+	char*							    name;
+	Ogre::SceneManager*		mSceneMgr;
+	double								timeToExtin;
+	bool									isfire;
+
+public:
+
+	Grid(Ogre::Vector3	  mposition, Ogre::SceneManager*	mSceneMgr, int setfire, int	num );
+	void setFire();
+	void deletFire();
+
+private:
+	char* creatname(int num);
+
+
+};
+
+//-----------------------------------------------
+
+class ExhibitionState : public AppState
+{
+public:
+
+    ExhibitionState( void );
+
+	DECLARE_APPSTATE_CLASS( ExhibitionState )
+
+	void    enter();
+	void    createSceneManager( void );
+    void    createCamera( void );
+    void    setViewport( void );
+    void    buildGUI( void );
+    void    createScene( void );
+	void    exit( void );
+    bool    pause( void );
+	void    resume( void );
+    
+    void    moveCamera( void );
+	void    getInput( void );
+    
+	bool    keyPressed( const OIS::KeyEvent &keyEventRef );
+	bool    keyReleased( const OIS::KeyEvent &keyEventRef );
+
+	bool    mouseMoved( const OIS::MouseEvent &evt );
+	bool    mousePressed( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+	bool    mouseReleased( const OIS::MouseEvent &evt, OIS::MouseButtonID id );
+
+	void    buttonHit( OgreBites::Button* button );
+    void	  itemSelected( OgreBites::SelectMenu* menu );
+    void	  checkBoxToggled( OgreBites::CheckBox* box );
+
+	void    update( double timeSinceLastFrame );
+
+	void deletFire();
+
+private:
+
+
+//----------------------------------add fire
+    double									timecounter;
+    bool										isfirst;
+    Ogre::Vector3						fireVec[FIRENUM];
+	Ogre::SceneNode*                fireNode[FIRENUM];
+	Ogre::ParticleSystem*	        firepar[FIRENUM];
+    bool										isfire[FIRENUM];
+    int										    setToFire[FIRENUM];
+	double									mCountUp;
+	ConvexVolume*					mConvexHull[FIRENUM];
+
+//----------------------------------add fire
+	bool                            mQuit;
+    bool                            mLMouseDown; 
+    bool                            mRMouseDown;
+    Ogre::Real                      mMoveScale;
+	Ogre::Real                      mCountDown;
+	Ogre::Vector3                   mTranslateVector;
+    Ogre::SceneNode*				mCurrentObject;
+	Ogre::String					mCurrentIdentity;
+    
+    OgreRecast*                     mRecast;
+    OgreDetourTileCache*            mDetourTileCache;
+    std::vector< Ogre::Entity* >    mNavmeshEnts;
+    Ogre::SceneNode*                mNavMeshNode;
+    OgreDetourCrowd*                mDetourCrowd;
+    ObstacleType                    mObstacleType;
+	ObstacleManager*                mObstacleMgr;
+    CharacterManager*               mCharacterMgr;
+
+    Ogre::RaySceneQuery*            mRayScnQuery;
+
+    bool                            mDebugDraw;
+    bool                            mWall;
+    bool                            mCurrentState;
+    bool                            mDisasterState; 
+
+    //GUI control
+    OgreBites::SelectMenu*          mObstacleMenu;
+
+    OgreBites::Label*               mTimeCount;
+	OgreBites::Button*				mDeleteBtn;
+	OgreBites::Button*				mRotateBtn;
+	OgreBites::Button*				mDetailBtn;
+    OgreBites::Button*				mSaveBtn;
+	OgreBites::Button*				mClearBtn;
+	OgreBites::Button*				mLoadBtn;
+
+	OgreBites::CheckBox*			mDebugDrawBox;
+	OgreBites::CheckBox*			mLogoBox;
+	OgreBites::CheckBox*			mFrameStatesBox;
+
+    OgreBites::Separator*           mSeparator1;
+    OgreBites::Separator*           mSeparator2;
+
+    
+private:
+
+    bool                queryCursorPosition( Ogre::Vector3 &rayHitPoint, unsigned long queryflags = NAVMESH_MASK, bool clipToNavmesh = true, Ogre::MovableObject **rayHitObject = NULL );
+    bool                rayQueryPointInScene( Ogre::Ray ray, unsigned long queryMask, Ogre::Vector3 &result, Ogre::MovableObject **foundMovable );
+    void				showDynamicBotton(bool visible);
+    void                setDebugVisibility( bool visible );
+    void                setStateGUI( bool visible );
+
+};
+
+
+//-----------------------------------------------
+
+#endif

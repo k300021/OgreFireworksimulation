@@ -1,0 +1,428 @@
+material NoMaterial
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material WGLA
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.870588 0.870588 0.870588 1
+			specular 0.8 0.8 0.8 1 29
+			emissive 1 1 1 1
+
+			texture_unit
+			{
+				texture REFMAP.GIF
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_reflection
+			}
+		}
+
+	}
+
+}
+
+
+
+material BL
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.027451 0.027451 0.027451 1
+			specular 0.73 0.73 0.73 1 47
+		}
+
+	}
+
+}
+
+
+
+material BL
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.027451 0.027451 0.027451 1
+			specular 0.73 0.73 0.73 1 47
+		}
+
+	}
+
+}
+
+
+
+material 17-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.443137 0.211765 0.00784314 1
+			diffuse 0.72549 0.290196 0 1
+			specular 0.27 0.27 0.27 1 10
+		}
+
+	}
+
+}
+
+
+
+material 12-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material BL
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.027451 0.027451 0.027451 1
+			specular 0.73 0.73 0.73 1 47
+		}
+
+	}
+
+}
+
+
+
+material 14-jingsu02
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0.72 0.72 0.72 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material GH
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.792157 0.792157 0.792157 1
+			specular 0.5 0.5 0.5 1 48
+			emissive 0.19 0.19 0.19 1
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material 13-jingsu01
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.137255 0.137255 0.137255 1
+			specular 0.72 0.72 0.72 1 20
+		}
+
+	}
+
+}
+
+
+
+material 24-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 10-boli003
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.152941 0.160784 0.176471 1
+			diffuse 0.694118 0.407843 0.0980392 1
+			specular 0.54 0.54 0.54 1 10
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material 18-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 15-jingsu003
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.52549 0.235294 0 1
+			diffuse 0.933333 0.52549 0 1
+			specular 0.72 0.72 0.72 1 20
+
+			texture_unit
+			{
+				transform 0.866025 0.5 0 -0.183013 -0.5 0.866025 0 0.316987 0 0 1 0 0 0 0 1
+			}
+		}
+
+	}
+
+}
+
+
+
+material 07-haibao401
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 10-boli
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.152941 0.160784 0.176471 1
+			diffuse 0.74902 0.854902 0.807843 1
+			specular 0.54 0.54 0.54 1 20
+			scene_blend add
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.5 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.5
+			}
+		}
+
+	}
+
+}
+
+
+
+material 02-log01
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 05-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 01-haibao01
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 06-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 04-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}

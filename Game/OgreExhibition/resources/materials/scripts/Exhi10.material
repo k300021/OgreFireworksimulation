@@ -1,0 +1,735 @@
+material NoMaterial
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material 10-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.980392 0.980392 1 1
+			specular 0 0 0 1 10
+			emissive 0.9 0.9 0.9 1
+		}
+
+	}
+
+}
+
+
+
+material Material#48
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#58
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.466667 0.466667 0.466667 1
+			specular 0 0 0 1 10
+			emissive 1 1 1 1
+		}
+
+	}
+
+}
+
+
+
+material 11-boli
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.00784314 0.309804 0.482353 1
+			diffuse 0.623529 0.737255 0.803922 1
+			specular 0.18 0.18 0.18 1 10
+			scene_blend add
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.2 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.2
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#49
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0.18 0.18 0.18 1 10
+			emissive 0.6 0.6 0.6 1
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 18-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 13-¤H
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			emissive 0.3 0.3 0.3 1
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#39
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0.196078 1
+			diffuse 0 0 0.588235 1
+			specular 0.595294 0.595294 0.595294 1 20
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material 10-Default01
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.980392 0.980392 1 1
+			diffuse 0.980392 0.980392 1 1
+			specular 0 0 0 1 10
+			emissive 0.9 0.9 0.9 1
+			scene_blend add
+			polygon_mode wireframe
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.9 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.9
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#42
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.419608 0.419608 0.419608 1
+			specular 0.9 0.9 0.9 1 50
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#40
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0.0196078 0.0392157 1
+			specular 0.340392 0.340392 0.340392 1 10
+			emissive 0.5 0.5 0.5 1
+		}
+
+	}
+
+}
+
+
+
+material Material#46
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#43
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.176471 0.176471 0.176471 1
+			specular 0.72 0.72 0.72 1 20
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 11-ding-boli
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.00784314 0.309804 0.482353 1
+			diffuse 0.921569 0.94902 1 1
+			specular 0.54 0.54 0.54 1 15
+			emissive 0.65 0.65 0.65 1
+			scene_blend add
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.6 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.6
+			}
+		}
+
+	}
+
+}
+
+
+
+material 12-mu
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.196078 0.0470588 0 1
+			diffuse 0.341176 0.121569 0 1
+			specular 0.147059 0.147059 0.147059 1 10
+		}
+
+	}
+
+}
+
+
+
+material Material#38
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0.135 0.135 0.135 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#44
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0.705882 0 1
+			specular 0.81 0.81 0.81 1 30
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#47
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#57
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0.135 0.135 0.135 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 03-huapen
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0.0196078 0.0392157 1
+			specular 0.340392 0.340392 0.340392 1 10
+			emissive 0.35 0.35 0.35 1
+		}
+
+	}
+
+}
+
+
+
+material Material#50
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.027451 0.027451 0.027451 1
+			specular 0.73 0.73 0.73 1 47
+		}
+
+	}
+
+}
+
+
+
+material PLMBMLEAF2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0823529 0.141176 0.027451 1
+			diffuse 0.192157 0.294118 0.0784314 1
+			specular 0.196706 0.196706 0.196706 1 25
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material GH
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.792157 0.792157 0.792157 1
+			specular 0.5 0.5 0.5 1 48
+			emissive 0.19 0.19 0.19 1
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material PLMBBLEAF2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0980392 0.14902 0.0196078 1
+			diffuse 0.172549 0.27451 0.0901961 1
+			specular 0.196706 0.196706 0.196706 1 25
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material PLMBBRANCH2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0784314 0.0901961 0.054902 1
+			diffuse 0.152941 0.196078 0.113725 1
+			specular 0.196706 0.196706 0.196706 1 25
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material PLMBELEAF2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0901961 0.172549 0.0156863 1
+			diffuse 0.180392 0.266667 0.0823529 1
+			specular 0.196706 0.196706 0.196706 1 25
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material Material#45
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material jianpan
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material PLMBBRANCH2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0784314 0.0901961 0.054902 1
+			diffuse 0.152941 0.196078 0.113725 1
+			specular 0.196706 0.196706 0.196706 1 25
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.7 0.7 0.7 1
+			diffuse 0.7 0.7 0.7 1
+			specular 0.707 0.707 0.707 1 50
+		}
+
+	}
+
+}
+
+
+
+material Material#50
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.027451 0.027451 0.027451 1
+			specular 0.73 0.73 0.73 1 47
+		}
+
+	}
+
+}
+
+
+
+material GH
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.792157 0.792157 0.792157 1
+			specular 0.5 0.5 0.5 1 48
+			emissive 0.19 0.19 0.19 1
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material Material#50
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.027451 0.027451 0.027451 1
+			specular 0.73 0.73 0.73 1 47
+		}
+
+	}
+
+}
+
+
+
+material WGLA
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.870588 0.870588 0.870588 1
+			specular 0.8 0.8 0.8 1 29
+			emissive 1 1 1 1
+
+			texture_unit
+			{
+				texture REFMAP.GIF
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_reflection
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#58
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.466667 0.466667 0.466667 1
+			specular 0 0 0 1 10
+			emissive 1 1 1 1
+		}
+
+	}
+
+}
+
+
+
+material Material#57
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0.135 0.135 0.135 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}

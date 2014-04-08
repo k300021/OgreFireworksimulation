@@ -1,0 +1,18 @@
+# use glob syntax
+syntax: glob
+
+*.o
+*.cfg
+*.pro.user*
+CMakeLists.txt
+*.log
+Makefile
+gmon.out
+screenshot*jpg
+screenshot*png
+OgreRecastDemo
+OgreRecastDemod
+*~
+*.orig
+*.obj
+junk/*

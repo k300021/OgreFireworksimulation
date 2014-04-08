@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1E320ABF-3D50-4C09-ADC6-A5983D99B340}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OgreExhibition</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost;$(CEGUI_HOME)\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\$(Configuration);$(OGRE_HOME)\boost\lib;$(CEGUI_HOME)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;OgreTerrain_d.lib;OIS_d.lib;CEGUIBase_d.lib;CEGUIOgreRenderer_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost;$(CEGUI_HOME)\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\$(Configuration);$(OGRE_HOME)\boost\lib;$(CEGUI_HOME)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain.lib;OgreTerrain.lib;OIS.lib;CEGUIBase.lib;CEGUIOgreRenderer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Agent\DynamicLines.h" />
+    <ClInclude Include="include\Agent\DynamicRenderable.h" />
+    <ClInclude Include="include\AppState.h" />
+    <ClInclude Include="include\AppStateManager.h" />
+    <ClInclude Include="include\Character.h" />
+    <ClInclude Include="include\CharacterManager.h" />
+    <ClInclude Include="include\CreationState-CEGUI.h" />
+    <ClInclude Include="include\CreationState.h" />
+    <ClInclude Include="include\DemoApp.h" />
+    <ClInclude Include="include\DetourCrowd\DetourCrowd.h" />
+    <ClInclude Include="include\DetourCrowd\DetourLocalBoundary.h" />
+    <ClInclude Include="include\DetourCrowd\DetourObstacleAvoidance.h" />
+    <ClInclude Include="include\DetourCrowd\DetourPathCorridor.h" />
+    <ClInclude Include="include\DetourCrowd\DetourPathQueue.h" />
+    <ClInclude Include="include\DetourCrowd\DetourProximityGrid.h" />
+    <ClInclude Include="include\DetourTileCache\DetourTileCache.h" />
+    <ClInclude Include="include\DetourTileCache\DetourTileCacheBuilder.h" />
+    <ClInclude Include="include\Detour\DetourAlloc.h" />
+    <ClInclude Include="include\Detour\DetourAssert.h" />
+    <ClInclude Include="include\Detour\DetourCommon.h" />
+    <ClInclude Include="include\Detour\DetourNavMesh.h" />
+    <ClInclude Include="include\Detour\DetourNavMeshBuilder.h" />
+    <ClInclude Include="include\Detour\DetourNavMeshQuery.h" />
+    <ClInclude Include="include\Detour\DetourNode.h" />
+    <ClInclude Include="include\Detour\DetourStatus.h" />
+    <ClInclude Include="include\ExhibitionState.h" />
+    <ClInclude Include="include\Header.h" />
+    <ClInclude Include="include\MenuState-CEGUI.h" />
+    <ClInclude Include="include\MenuState.h" />
+    <ClInclude Include="include\Obstacle.h" />
+    <ClInclude Include="include\ObstacleManager.h" />
+    <ClInclude Include="include\OgreDetourCrowd.h" />
+    <ClInclude Include="include\OgreDetourTileCache.h" />
+    <ClInclude Include="include\OgreFramework.h" />
+    <ClInclude Include="include\OgreRecast.h" />
+    <ClInclude Include="include\OgreRecastDefinitions.h" />
+    <ClInclude Include="include\PauseState.h" />
+    <ClInclude Include="include\RecastContrib\fastlz\fastlz.h" />
+    <ClInclude Include="include\RecastConvexHull.h" />
+    <ClInclude Include="include\RecastInputGeom.h" />
+    <ClInclude Include="include\Recast\Recast.h" />
+    <ClInclude Include="include\Recast\RecastAlloc.h" />
+    <ClInclude Include="include\Recast\RecastAssert.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Agent\DynamicLines.cpp" />
+    <ClCompile Include="source\Agent\DynamicRenderable.cpp" />
+    <ClCompile Include="source\AppStateManager.cpp" />
+    <ClCompile Include="source\Character.cpp" />
+    <ClCompile Include="source\CharacterManager.cpp" />
+    <ClCompile Include="source\CreationState-CEGUI.cpp" />
+    <ClCompile Include="source\CreationState.cpp" />
+    <ClCompile Include="source\DemoApp.cpp" />
+    <ClCompile Include="source\DetourCrowd\DetourCrowd.cpp" />
+    <ClCompile Include="source\DetourCrowd\DetourLocalBoundary.cpp" />
+    <ClCompile Include="source\DetourCrowd\DetourObstacleAvoidance.cpp" />
+    <ClCompile Include="source\DetourCrowd\DetourPathCorridor.cpp" />
+    <ClCompile Include="source\DetourCrowd\DetourPathQueue.cpp" />
+    <ClCompile Include="source\DetourCrowd\DetourProximityGrid.cpp" />
+    <ClCompile Include="source\DetourTileCache\DetourTileCache.cpp" />
+    <ClCompile Include="source\DetourTileCache\DetourTileCacheBuilder.cpp" />
+    <ClCompile Include="source\Detour\DetourAlloc.cpp" />
+    <ClCompile Include="source\Detour\DetourCommon.cpp" />
+    <ClCompile Include="source\Detour\DetourNavMesh.cpp" />
+    <ClCompile Include="source\Detour\DetourNavMeshBuilder.cpp" />
+    <ClCompile Include="source\Detour\DetourNavMeshQuery.cpp" />
+    <ClCompile Include="source\Detour\DetourNode.cpp" />
+    <ClCompile Include="source\ExhibitionState.cpp" />
+    <ClCompile Include="source\MenuState-CEGUI.cpp" />
+    <ClCompile Include="source\MenuState.cpp" />
+    <ClCompile Include="source\Obstacle.cpp" />
+    <ClCompile Include="source\ObstacleManager.cpp" />
+    <ClCompile Include="source\OgreDetourCrowd.cpp" />
+    <ClCompile Include="source\OgreDetourTileCache.cpp" />
+    <ClCompile Include="source\OgreFramework.cpp" />
+    <ClCompile Include="source\OgreRecast.cpp" />
+    <ClCompile Include="source\PauseState.cpp" />
+    <ClCompile Include="source\RecastContrib\fastlz\fastlz.c" />
+    <ClCompile Include="source\RecastConvexHull.cpp" />
+    <ClCompile Include="source\RecastInputGeom.cpp" />
+    <ClCompile Include="source\Recast\Recast.cpp" />
+    <ClCompile Include="source\Recast\RecastAlloc.cpp" />
+    <ClCompile Include="source\Recast\RecastArea.cpp" />
+    <ClCompile Include="source\Recast\RecastContour.cpp" />
+    <ClCompile Include="source\Recast\RecastFilter.cpp" />
+    <ClCompile Include="source\Recast\RecastLayers.cpp" />
+    <ClCompile Include="source\Recast\RecastMesh.cpp" />
+    <ClCompile Include="source\Recast\RecastMeshDetail.cpp" />
+    <ClCompile Include="source\Recast\RecastRasterization.cpp" />
+    <ClCompile Include="source\Recast\RecastRegion.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

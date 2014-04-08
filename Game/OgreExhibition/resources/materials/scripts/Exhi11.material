@@ -1,0 +1,303 @@
+material NoMaterial
+{
+	technique
+	{
+		pass
+		{
+		}
+
+	}
+
+}
+
+
+
+material ®i¥Ü¬[®Ø1001
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 1.17 1.17 1.17 1 30
+		}
+
+	}
+
+}
+
+
+
+material 1-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			specular 0 0 0 1 10
+			emissive 0.8 0.8 0.8 1
+		}
+
+	}
+
+}
+
+
+
+material Material#57
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+				texture Brice.jpg
+				transform 3.57628e-008 -0.6 0 1 0.6 3.57628e-008 0 0 0 0 1 0 0 0 0 1
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#55
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.996078 0.992157 0.972549 1
+			diffuse 0.996078 0.992157 0.972549 1
+			specular 0 0 0 1 10
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}
+
+
+
+material 14-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			specular 0 0 0 1 10
+			emissive 0.74 0.74 0.74 1
+		}
+
+	}
+
+}
+
+
+
+material 16-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0 0 1
+			specular 0.81 0.81 0.81 1 15
+			emissive 0.8 0.8 0.8 1
+		}
+
+	}
+
+}
+
+
+
+material Material#1
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+		}
+
+	}
+
+}
+
+
+
+material Material#0
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}
+
+
+
+material 10-deng
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.643137 0.643137 0.643137 1
+			diffuse 0.901961 0.901961 0.901961 1
+			specular 0.72549 0.72549 0.72549 1 10
+			emissive 0.960784 0.960784 0.960784 1
+			scene_blend add
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.9 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.9
+			}
+		}
+
+	}
+
+}
+
+
+
+material 17-yinxiang001
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.321569 0.321569 0.321569 1
+			specular 0.9 0.9 0.9 1 30
+			polygon_mode wireframe
+		}
+
+	}
+
+}
+
+
+
+material 13-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 0.0196078 0.0196078 1
+			specular 0 0 0 1 10
+		}
+
+	}
+
+}
+
+
+
+material Material#13
+{
+	technique
+	{
+		pass
+		{
+			specular 0 0 0 1 10
+		}
+
+	}
+
+}
+
+
+
+material 3-boli-zi
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.121569 0.105882 0.235294 1
+			diffuse 0.952941 0.956863 0.960784 1
+			specular 0.372549 0.372549 0.372549 1 15
+			scene_blend add
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.6 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.6
+			}
+		}
+
+	}
+
+}
+
+
+
+material 4-ding001
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0588235 0.0588235 0.0588235 1
+			diffuse 0.984314 0.964706 0.74902 1
+			specular 0.3 0.3 0.3 1 10
+		}
+
+	}
+
+}
+
+
+
+material 2-boli001
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.270588 0.333333 0.411765 1
+			diffuse 0.588235 0.658824 0.784314 1
+			specular 0.585 0.585 0.585 1 10
+			scene_blend add
+
+			texture_unit
+			{
+				colour_op_ex blend_manual src_manual src_current 0.3 1 1 1
+				colour_op_multipass_fallback dest_colour zero
+				alpha_op_ex source1 src_manual src_current 0.3
+			}
+		}
+
+	}
+
+}

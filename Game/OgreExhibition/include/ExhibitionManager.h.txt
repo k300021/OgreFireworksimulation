@@ -1,0 +1,39 @@
+#ifndef __ExhibitionManager_h_
+#define __ExhibitionManager_h_
+
+#include "Exhibition.h"
+//#include "ExhibitionMap.h"
+#include <vector>
+
+//-----------------------------------------------
+
+class ExhibitionManager
+{
+public:
+	ExhibitionManager( SceneManager* mgr );
+	~ExhibitionManager( void );
+	void			createExhibition( Exhibition::exhibitionType mType );
+
+	//by current state
+	Entity*			createExhibition( Vector3 mPosition );
+	void			deleteExhibition( Entity* entity );
+	void			showExhibitionDetail( void );
+	void			showMap( void );
+	void			rotateExhibition(SceneNode* mSceneNode);
+	void			setPosition( SceneNode* mSceneNode, Vector3 mPosition );
+	void			setCurrentState( Exhibition::exhibitionType state );
+	Exhibition::exhibitionType	getCurrentState( void );
+	
+private:
+	String						generateName( int number );
+	SceneManager*				mSceneMgr;
+	int							quantLength;
+	int							exhibitionNum;
+	Exhibition::exhibitionType	currentState;
+	//ExhibitionMap*			mMap;
+
+	std::vector<Exhibition> ExhibitionList;
+};
+
+
+#endif 

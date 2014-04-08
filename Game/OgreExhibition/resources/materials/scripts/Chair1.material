@@ -1,0 +1,33 @@
+material Material#2
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.0196078 0.054902 0.0156863 1
+			diffuse 0.0156863 0.403922 0.145098 1
+			specular 0.135 0.135 0.135 1 25
+		}
+
+	}
+
+}
+
+
+
+material *GLOBAL*
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 0 1
+			diffuse 1 1 0 1
+			specular 0 0 0 1 50
+			cull_hardware none
+			cull_software none
+		}
+
+	}
+
+}

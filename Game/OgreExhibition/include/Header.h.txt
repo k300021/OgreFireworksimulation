@@ -1,0 +1,27 @@
+#ifndef __HEADER_H__
+#define __HEADER_H__
+
+enum QueryFlags 
+{
+    DEFAULT_MASK    = 1u << 0,
+    NAVMESH_MASK    = 1u << 1,
+    OBSTACLE_MASK   = 1u << 2,
+    MAP_MASK        = 1u << 3,
+    CHARACTER_MASK  = 1u << 4,
+    DEBUG_MASK      = 1u << 5
+};
+
+enum ObstacleType
+{
+    BOX			= 0,
+
+    POT1		= 10,
+    POT2		= 11,
+    
+	TABLE1      = 20,
+    TABLE2      = 21,
+
+    CHAIR1      = 30
+};
+
+#endif
